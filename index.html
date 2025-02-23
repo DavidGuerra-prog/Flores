@@ -1,83 +1,33 @@
 <!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flores Bonitas</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-    }.flower-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 30px;
-  padding: 40px;
-  max-width: 800px;
-}
-
-.flower {
-  background: #ffe0f0;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.flower::before, .flower::after {
-  content: '';
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: #ffcce0;
-  border-radius: 50%;
-}
-
-.flower::before {
-  transform: rotate(45deg);
-}
-
-.flower::after {
-  transform: rotate(-45deg);
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  background: #ffb3c1;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.message {
-  margin-top: 30px;
-  font-size: 1.8rem;
-  color: #333;
-  text-align: center;
-  font-weight: bold;
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores para Ti</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f0e3;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-top: 20px;
+            color: #d63384;
+        }
+    </style>
 </head>
 <body>
-  <div class="flower-container">
-    <div class="flower"><div class="center"></div></div>
-    <div class="flower"><div class="center"></div></div>
-    <div class="flower"><div class="center"></div></div>
-    <div class="flower"><div class="center"></div></div>
-    <div class="flower"><div class="center"></div></div>
-    <div class="flower"><div class="center"></div></div>
-  </div>
-  <div class="message">Mereces todas las flores del mundo.</div>
+    <img src="https://source.unsplash.com/600x400/?flowers" alt="Flores hermosas">
+    <h1>Mereces todas las flores del mundo. Te amo.</h1>
 </body>
 </html>
