@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Animadas</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .flowers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .flower {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4);
+      border-radius: 50%;
+      position: relative;
+      animation: bloom 3s infinite ease-in-out;
+    }
+
+    .flower::before, .flower::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ffdde1, #ee9ca7);
+      border-radius: 50%;
+    }
+
+    .flower::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .flower::after {
+      top: 0;
+      left: -50px;
+    }
+
+    @keyframes bloom {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #333;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="flowers">
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+  </div>
+  <div class="message">Mereces todas las flores del mundo.</div>
+</body>
+</html>
